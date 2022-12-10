@@ -82,7 +82,7 @@ class TestGeneralGraph(TestCase):
         # Graph Edges:
         # 1. X1 --> X4
         # 2. X2 --> X4
-        # 3. X3 --- X4
+        # 3. X4 --> X3
         # 4. X4 --> X5
 
     def test_case1(self):
@@ -111,7 +111,7 @@ class TestGeneralGraph(TestCase):
         print(f'{nodes[2]} is ancestor of {nodes[3]}: {graph.is_ancestor_of(nodes[2], nodes[3])}')
         # 3 --> 2
         # 3 is ancestor of 2: True
-        # 2 is ancestor of 3: True
+        # 2 is ancestor of 3: False
 
         assert graph.is_ancestor_of(nodes[3], nodes[2])
         assert not graph.is_ancestor_of(nodes[2], nodes[3])
